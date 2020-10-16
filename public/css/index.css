@@ -1,0 +1,50 @@
+/* 
+녹색 : #339059
+진한 녹색 : #277045
+빨간 블릿 : #da0f0a
+wrapper 1144px 
+*/
+
+/***************** 공통사항 *****************/
+html, body {font-size: 16px;}
+.wrapper {width: 110px; padding: 0 32px; margin: 0 auto; max-width: 1136px; }
+
+
+
+
+/***************** .header-wrapper *****************/
+.header-wrapper {} /* 내가 가지고 있는 폰트 사이즈의 50% */
+.top-wrapper {background-color: #339059; color: #f8f8f8; font-size: 0.75em; padding: 1em;}
+.top-wrapper > .wrapper {display: flex; justify-content: space-between; align-items: center;}
+.top-wrapper .link-wrap a {padding: 0.25em 1em; border-right: rgba(255, 255, 255, 0.3);}
+.top-wrapper .link-wrap a:last-child {border-right: none;}
+
+
+
+
+
+/***************** 공통사항 *****************/
+/***************** 공통사항 *****************/
+/***************** 공통사항 *****************/
+/***************** 공통사항 *****************/
+
+
+
+/***************** 반응형 *****************/
+@media screen and (max-width: 1199px) {
+	.wrapper {width: 900;}	
+}
+@media screen and (max-width: 991px) {
+	.wrapper {width: 700px;}	
+	.top-wrapper > .wrapper {justify-content: center;}
+	.top-wrapper .link-wrap {display: none;}
+	
+}
+@media screen and (max-width: 767px) {
+	.wrapper {width: 500px;}
+	
+}
+@media screen and (max-width: 575px) {
+	.wrapper {width: 98%;}
+
+}
