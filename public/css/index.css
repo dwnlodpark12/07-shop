@@ -3,25 +3,49 @@
 진한 녹색 : #277045
 빨간 블릿 : #da0f0a
 wrapper 1144px 
+
+font-family: 'Rubik', sans-serif;
 */
 
 /***************** 공통사항 *****************/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
 html, body {font-size: 16px;}
-.wrapper {width: 110px; padding: 0 32px; margin: 0 auto; max-width: 1136px; }
+.wrapper {width: 1100px; padding: 0 32px; margin: 0 auto; max-width: 1136px; }
 
-
+.badge-wrap {position: relative;}
+.badge {display: flex; justify-content: center; align-items: center; position: absolute; top: -8px; right: -8px; }
+.badge.count {width: 16px; height: 16px; background-color: #277045; color: #ffffff; border-radius: 50%; font-size: 0.75em; font-weight: 300;}
 
 
 /***************** .header-wrapper *****************/
-.header-wrapper {} /* 내가 가지고 있는 폰트 사이즈의 50% */
+.header-wrapper {font-family: 'Rubik', sans-serif;} /* 내가 가지고 있는 폰트 사이즈의 50% */
 .top-wrapper {background-color: #339059; color: #f8f8f8; font-size: 0.75em; padding: 1em;}
 .top-wrapper > .wrapper {display: flex; justify-content: space-between; align-items: center;}
 .top-wrapper .link-wrap a {padding: 0.25em 1em; border-right: rgba(255, 255, 255, 0.3);}
 .top-wrapper .link-wrap a:last-child {border-right: none;}
 
+.title-wrapper {display: flex; justify-content: space-between; align-items: center; position: relative;}
+.title-wrapper >.logo-wrap {flex: 200px 0 0;}
+.title-wrapper >.navi-wrap {display: flex;}
+.title-wrapper >.cart-wrap {display: flex; flex: 200px 0 0;}
+
+.title-wrapper >.navi-wrap > .navi {position: relative; padding: 2rem 0.75em;}
+.title-wrapper >.navi-wrap > .navi > .sub-wrap{position: absolute; display: none; top: 80px; left: 0; width: 200px; background-color: #fff; height: 400px; box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);}
+.title-wrapper >.navi-wrap > .navi:nth-child(1) > .sub-wrap {width: 500px;}
+.title-wrapper >.navi-wrap > .navi:nth-child(2) > .sub-wrap {width: 100%;}
+.title-wrapper >.navi-wrap > .navi:nth-child(3) > .sub-wrap {width: 150px;}
+.title-wrapper >.navi-wrap > .navi:nth-child(4) > .sub-wrap {width: 300px;}
+.title-wrapper >.navi-wrap > .navi:nth-child(5) > .sub-wrap {width: 200px;}
 
 
+.title-wrapper >.navi-wrap > .navi > .title {font-size: 0.875em; font-weight: 400; color: #333333;}
+.title-wrapper >.navi-wrap .fa-angle-down {font-size: 0.75em; color: #aaa;}
 
+.title-wrapper >.cart-wrap i {font-size: 1.125em; color: #333;}
+.title-wrapper >.cart-wrap div {margin: 0 1em;}
+.title-wrapper >.cart-wrap >.cart > i {margin-right: 5px;}
+.title-wrapper >.cart-wrap >.cart span {font-size: 0.75em;}
+.title-wrapper >.cart-wrap >.cart span.cart-price {font-weight: 500;}
 
 /***************** 공통사항 *****************/
 /***************** 공통사항 *****************/
@@ -32,7 +56,7 @@ html, body {font-size: 16px;}
 
 /***************** 반응형 *****************/
 @media screen and (max-width: 1199px) {
-	.wrapper {width: 900;}	
+	.wrapper {width: 900px;}	
 }
 @media screen and (max-width: 991px) {
 	.wrapper {width: 700px;}	
@@ -47,4 +71,4 @@ html, body {font-size: 16px;}
 @media screen and (max-width: 575px) {
 	.wrapper {width: 98%;}
 
-}
+} 
