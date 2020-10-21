@@ -1,14 +1,40 @@
-
 function onEnter() {
-$("sub-wrap").hide();
-$(this).find(".sub-wrap").css("display","flex");
+	$(this).find(".sub-wrap").css("display", "flex");
 }
 function onLeave() {
-	$(this).find(".sub-wrap").css("display","none");
-
+	$(this).find(".sub-wrap").css("display", "none");
+}
+function onColorClick() {
+	$(this).addClass("active").siblings().removeClass("active");
+	var $imgCase = $(this).parent().prev().find(".img-case");
+	$imgCase.stop().fadeOut(100);
+	$imgCase.eq($(this).index()).stop().delay(100).fadeIn(100);
 }
 
-/****************Main Navi 생성***********************/
+var subNow = 0;
+var subLast = 3;
+function onSubPrevClick() {
+	if(subNow == 0) {
+		subNow = subLast - 1;
+		$(".sub-slide .wrap").css("left", -subLast * 100 +"%");
+	}
+	else subNow--;
+	subAni();
+}
+function onSubNextClick() {
+	if(subNow < subLast) subNow++;
+	subAni();
+}
+function subAni() {
+	$(".sub-slide .wrap").stop().animate({"left": -100 * subNow +"%"}, 500, function(){
+		if(subNow == subLast) {
+			subNow = 0;
+			$(".sub-slide .wrap").css("left", 0);
+		}
+	});
+}
+
+/** Main Navi 생성 **********************/
 $.get('../json/navi.json', onNaviLoad);
 function onNaviLoad(r) {
 	console.log(r.navs);
@@ -73,15 +99,18 @@ function onNaviLoad(r) {
 	}
 	$(".navi-wrap > .navi").mouseenter(onEnter);
 	$(".navi-wrap > .navi").mouseleave(onLeave);
+	$(".sub-slide .color").find("span").click(onColorClick);
+	$(".sub-slide .bt-prev").click(onSubPrevClick);
+	$(".sub-slide .bt-next").click(onSubNextClick);
 }
 /*
 <div class="navi">
-					<span class="title">HOME <i class="fa fa-angle-down"></i> </span>
-					<div class="sub-wrap">
-						<div class="sub">
-							<div class="title">1. HOME DEFAULT</div>
-							<div class="cont-img"><img src="../img/default.jpg" alt="그림" class="w-100"></div>
-						</div>
-					</div>
-				</div>
+	<span class="title">HOME <i class="fa fa-angle-down"></i></span>
+	<div class="sub-wrap">
+		<div class="sub">
+			<div class="title">1. HOME DEFAULT</div>
+			<div class="cont-img"><img src="../img/default.jpg" alt="그림" class="w-100"></div>
+		</div>
+	</div>
+</div>
 */
