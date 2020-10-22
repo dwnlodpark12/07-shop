@@ -34,6 +34,27 @@ function subAni() {
 	});
 }
 
+function columnMaker (data) {
+	var html = '';
+	html += '		<div class="subs">';
+	for(var i in data) {
+		html += '			<div class="sub">';
+		html += '				<div class="title">'+data[i].title+'</div>';
+		for(var j in data[i].subs) {
+			html += '			<div class="name rel">'+data[i].subs[j].title;
+			if(data[i].subs[j].icon != ''){
+				html += '<div class="icon '+data[i].subs[j].color+'">'+data[i].subs[j].icon;
+				html += '<i class="fas fa-caret-right"></i>';
+				html += '</div>';
+			}
+			html +='</div>';
+		}
+		html += '</div>';
+	}
+	html += '</div>';
+	return (html);
+}
+
 /** Main Navi 생성 **********************/
 $.get('../json/navi.json', onNaviLoad);
 function onNaviLoad(r) {
@@ -49,7 +70,7 @@ function onNaviLoad(r) {
 		} 
 		html += '</div>';
 		html += '<div class="sub-wrap">';
-		if(i == 0) {
+		if(r.navs[i].class.indexOf('IMAGE') > -1) {
 			for(var j in r.navs[i].subs) {
 				html += '<div class="sub">';
 				html += '<div class="title">'+r.navs[i].subs[j].title+'</div>';
@@ -57,49 +78,35 @@ function onNaviLoad(r) {
 				html += '</div>';
 			}
 		}
-		else if(i == 1) {
+		else if (r.navs[i].class.indexOf('FULL') > -1) {
 			html += '<div class="wrapper">';
 			html += '	<div class="lt">';
-			html += '		<div class="subs">';
-			for(var j in r.navs[i].subs) {
-				html += '			<div class="sub">';
-				html += '				<div class="title">'+r.navs[i].subs[j].title+'</div>';
-				for(var k in r.navs[i].subs[j].subs) {
-					html += '			<div class="name rel">'+r.navs[i].subs[j].subs[k].title;
-					if(r.navs[i].subs[j].subs[k].icon != ''){
-						html += '<div class="icon '+r.navs[i].subs[j].subs[k].color+'">'+r.navs[i].subs[j].subs[k].icon;
-						html += '<i class="fas fa-caret-right"></i>';
-						html += '</div>';
-					}
-					html +='</div>';
-				}
-				html += '			</div>';
-			}
-			html += '		</div>';
+			html += columnMaker(r.navs[i].subs);
+			console.log(html);
 			html += '		<div class="infos">';
-			for(var j in r.navs[i].infos) {
+			for (var j in r.navs[i].infos) {
 				html += '<div class="info">';
 				html += '	<div class="title">';
-				html += '		<i class="'+r.navs[i].infos[j].icon+'"></i> ';
-				html += 		r.navs[i].infos[j].title;
+				html += '		<i class="' + r.navs[i].infos[j].icon + '"></i> ';
+				html += r.navs[i].infos[j].title;
 				html += '	</div>';
-				html += '	<div class="content">'+r.navs[i].infos[j].content+'</div>';
+				html += '	<div class="content">' + r.navs[i].infos[j].content + '</div>';
 				html += '</div>';
 			}
 			html += '		</div>';
-			html += '	</div>';	// .lt
+			html += '	</div>'; // .lt
 			html += '	<div class="rt">';
 			html += '		<div class="sub-slide">';
 			html += '			<div class="stage">';
 			html += '				<div class="wrap">';
 			r.navs[i].slides.push(r.navs[i].slides[0]);
-			for(var j in r.navs[i].slides) {
+			for (var j in r.navs[i].slides) {
 				html += '<div class="slide">';
 				html += '	<div class="img-wrap">';
-				for(var k in r.navs[i].slides[j].cases) {
-					html += '<div class="img-case '+(k == 0 ? "active": "")+'">';
-					for(var l in r.navs[i].slides[j].cases[k].img) {
-						html += '<img src="'+r.navs[i].slides[j].cases[k].img[l]+'" class="w-100">';
+				for (var k in r.navs[i].slides[j].cases) {
+					html += '<div class="img-case ' + (k == 0 ? "active" : "") + '">';
+					for (var l in r.navs[i].slides[j].cases[k].img) {
+						html += '<img src="' + r.navs[i].slides[j].cases[k].img[l] + '" class="w-100">';
 					}
 					html += '</div>';
 				}
@@ -126,31 +133,34 @@ function onNaviLoad(r) {
 				html += '		</div>';
 				html += '	</div>';
 				html += '	<div class="color">';
-				for(var k in r.navs[i].slides[j].cases) {
-					html += '<span class="'+r.navs[i].slides[j].cases[k].color+'">●</span>';
+				for (var k in r.navs[i].slides[j].cases) {
+					html += '<span class="' + r.navs[i].slides[j].cases[k].color + '">●</span>';
 				}
 				html += '	</div>';
-				html += '	<div class="title">'+r.navs[i].slides[j].title+'</div>';
-				html += '	<div class="brand">'+r.navs[i].slides[j].brand+'</div>';
+				html += '	<div class="title">' + r.navs[i].slides[j].title + '</div>';
+				html += '	<div class="brand">' + r.navs[i].slides[j].brand + '</div>';
 				html += '	<div class="price">';
-				if(r.navs[i].slides[j].price !== "") 
+				if (r.navs[i].slides[j].price !== "")
 					html += r.navs[i].slides[j].price;
 				else {
-					html += '<span class="price-def">'+r.navs[i].slides[j].priceDef+'</span> ';
-					html += '<span class="price-sale">'+r.navs[i].slides[j].priceSale+'</span>';
+					html += '<span class="price-def">' + r.navs[i].slides[j].priceDef + '</span> ';
+					html += '<span class="price-sale">' + r.navs[i].slides[j].priceSale + '</span>';
 				}
 				html += '	</div>';
-				html += '</div>';	// .slide
+				html += '</div>'; // .slide
 			}
 			html += '				</div>'; // .wrap
 			html += '				<div class="bt-pager bt-prev">〈</div>';
 			html += '				<div class="bt-pager bt-next">〉</div>';
 			html += '			</div>';
-			html += '		</div>';	// .sub-slide
-			html += '	</div>';	// .rt
+			html += '		</div>'; // .sub-slide
+			html += '	</div>'; // .rt
 			html += '<div>';
 		}
-		html += '</div>';	// .sub-wrap
+		else if (r.navs[i].class.indexOf('COL') > -1) {
+			html += columnMaker(r.navs[i].subs);
+		}
+		html += '</div>'; // .sub-wrap
 		html += '</div>'; // .navi
 		console.log(html);
 		$(".navi-wrap").append(html);
