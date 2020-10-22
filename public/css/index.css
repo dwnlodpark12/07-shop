@@ -38,7 +38,8 @@ html, body {font-size: 16px;}
 .top-wrapper .link-wrap a:last-child {border-right: none;}
 
 .title-wrapper {display: flex; justify-content: space-between; align-items: center;}
-.title-wrapper > .logo-wrap {flex: 200px 0 0;}
+.title-wrapper > .navi-mo-wrap {display: none;}
+.title-wrapper > .logo-wrap > img {min-width: 200px;}
 .title-wrapper > .navi-wrap {display: flex; user-select: none;}
 .title-wrapper > .cart-wrap {flex: 200px 0 0; display: flex;}
 
@@ -143,7 +144,13 @@ html, body {font-size: 16px;}
 @media screen and (max-width: 991px) {
 	.wrapper {width: 700px;}
 	.top-wrapper > .wrapper {justify-content: center;}
-	.top-wrapper .link-wrap {display: none;}
+	.top-wrapper  .link-wrap {display: none;}
+.title-wrapper  {display: block; text-align: center;}
+.title-wrapper > .navi-mo-wrap {flex: 15% 0 0; display: block;}
+.title-wrapper > .logo-wrap {flex: 50% 0 0; text-align: center;}
+.title-wrapper > .navi-wrap {display: none;}
+.title-wrapper > .cart-wrap {flex: 25% 0 0;}
+
 }
 @media screen and (max-width: 767px) {
 	.wrapper {width: 500px;}
