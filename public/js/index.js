@@ -1,30 +1,12 @@
-function onEnter() {
-	$(this).find(".sub-wrap").css("display", "flex");
-}
-function onLeave() {
-	$(this).find(".sub-wrap").css("display", "none");
-}
-function onColorClick() {
-	$(this).addClass("active").siblings().removeClass("active");
-	var $imgCase = $(this).parent().prev().find(".img-case");
-	$imgCase.stop().fadeOut(100);
-	$imgCase.eq($(this).index()).stop().delay(100).fadeIn(100);
-}
+/***** 전역변수 선언 ***********************/
+var subNow = 0;		//.navi.full 에서의 슬라이드 변수 
+var subLast = 3;	//.navi.full 에서의 슬라이드 변수 
 
-var subNow = 0;
-var subLast = 3;
-function onSubPrevClick() {
-	if(subNow == 0) {
-		subNow = subLast - 1;
-		$(".sub-slide .wrap").css("left", -subLast * 100 +"%");
-	}
-	else subNow--;
-	subAni();
-}
-function onSubNextClick() {
-	if(subNow < subLast) subNow++;
-	subAni();
-}
+
+
+/***** 사용자 지정 함수 ********************/
+
+// .navi.FULL 에서의 슬라이드
 function subAni() {
 	$(".sub-slide .wrap").stop().animate({"left": -100 * subNow +"%"}, 500, function(){
 		if(subNow == subLast) {
@@ -34,6 +16,7 @@ function subAni() {
 	});
 }
 
+//.navi에서의 서브 카테고리 생성
 function columnMaker (data) {
 	var html = '';
 	html += '		<div class="subs">';
@@ -55,8 +38,44 @@ function columnMaker (data) {
 	return (html);
 }
 
-/** Main Navi 생성 **********************/
-$.get('../json/navi.json', onNaviLoad);
+
+/***** 이벤트 콜백 *************************/
+
+//	.navi 의 sub-wrap 토글
+function onEnter() {
+	$(this).find(".sub-wrap").css("display", "flex");
+}
+
+//	.navi 의 sub-wrap 토글
+function onLeave() {
+	$(this).find(".sub-wrap").css("display", "none");
+}
+
+//	.navi.FULL의 슬라이드 이미지 교체 
+function onColorClick() {
+	$(this).addClass("active").siblings().removeClass("active");
+	var $imgCase = $(this).parent().prev().find(".img-case");
+	$imgCase.stop().fadeOut(100);
+	$imgCase.eq($(this).index()).stop().delay(100).fadeIn(100);
+}
+
+//	.navi.FULL의 슬라이드 PREV
+function onSubPrevClick() {
+	if(subNow == 0) {
+		subNow = subLast - 1;
+		$(".sub-slide .wrap").css("left", -subLast * 100 +"%");
+	}
+	else subNow--;
+	subAni();
+}
+
+//	.navi.FULL의 슬라이드 NEXT
+function onSubNextClick() {
+	if(subNow < subLast) subNow++;
+	subAni();
+}
+
+//	.navi의 ajax 콜백
 function onNaviLoad(r) {
 	//console.log(r.navs);
 	var html = '';
@@ -175,60 +194,97 @@ function onNaviLoad(r) {
 		},
 		threshold: 30
 	});
-	$(".sub-slide .bt-prev").click(onSubPrevClick);
-	$(".sub-slide .bt-next").click(onSubNextClick);
+	$(".sub-slide .bt-prev").on("click", onSubPrevClick);
+	$(".sub-slide .bt-next").on("click", onSubNextClick);
 }
-/*
-<div class="navi">
-	<span class="title">HOME <i class="fa fa-angle-down"></i></span>
-	<div class="sub-wrap">
-		<div class="sub">
-			<div class="title">1. HOME DEFAULT</div>
-			<div class="cont-img"><img src="../img/default.jpg" alt="그림" class="w-100"></div>
-		</div>
-	</div>
-</div>
+
+// .navi-mo-icon click 콜백
+function onNaviMoClick(e) {
+	$(".mo-wrapper").css("display", "block");
+	$(".mo-wrapper").css("background-color");
+	$(".mo-wrapper").css("background-color", "rgba(0,0,0,0.6)");
+	$(".mo-wrap").css("left", 0);
+}
+
+// .mo-wrapper click 콜백
+function onMoWrapperClick(e) {
+	$(".mo-wrapper").css("background-color", "rgba(0,0,0,0)");
+	$(".mo-wrapper").delay(500).hide(0);
+	$(".mo-wrap").css("left", "-270px");
+}
+
+//	.mo-wrap click 콜백
+function onMoWrapClick(e) {
+	e.stopPropagation();
+}
+
+//	.mo-navi click 콜백
+function onMoNaviClick(e) {
+	$(this).toggleClass("active");
+}
+
+//	resize 콜백
+function onResize(e) {
+
+}
+
+//	window scroll 콜백
+function onScroll(e) {
+	var scTop = $(this).scrollTop();
+
+	//	header의 fixed
+	if(scTop > 180) {
+		$(".top-wrapper").css("display","none");
+		$(".search-wrapper").css("display","none");
+		$(".header-wrapper").css({
+			"position":"fixed",
+			"top":0,
+			"box-shadow":"0 0 8px rgba(0,0,0,0.3)",
+	});
+	}
+	else {
+		$(".top-wrapper").css("display","block");
+		$(".search-wrapper").css("display","flex");
+		$(".header-wrapper").css({
+			"position":"static",
+			"top":"-85px",
+			"box-shadow":"none"
+	});
+	}
+}
+
+//	.mo-wrapper 콜백
+function onMobileScroll(e) {
+	e.stopPropagation();
+	e.preventDefault();
+	/* $("html,body").css({
+		"overflow":"hidden",
+		"height":"100vh"
+	}); */
+}
 
 
+/***** 이벤트 등록 *************************/
 
-<div class="sub-slide">
-	<div class="stage">
-		<div class="wrap">
-			<div class="slide">
-				<div class="img-wrap">
-					<div class="img-case active">
-						<img src="../img/ss-01-blue-01.jpg" class="w-100">
-						<img src="../img/ss-01-blue-02.jpg" class="w-100">
-					</div>
-					<div class="bt bt-icon bt-heart">
-						<div class="popper">
-							Login to use Wishlist <i class="fa fa-caret-right"></i>
-						</div>
-						<i class="far fa-heart"></i>
-					</div>
-					<div class="bt bt-icon bt-sync">
-						<div class="popper">
-							Compare <i class="fa fa-caret-right"></i>
-						</div>
-						<i class="fa fa-sync"></i>
-					</div>
-					<div class="bt bt-icon bt-search">
-						<div class="popper">
-							Quick View <i class="fa fa-caret-right"></i>
-						</div>
-						<i class="fa fa-search-plus"></i>
-					</div>
-				</div>
-				<div class="color">
-					<span class="blue">●</span>
-				</div>
-				<div class="title">Yus condntum sapien</div>
-				<div class="brand">BASEL</div>
-				<div class="price">$592.00</div>
-			</div>
-		</div>
-		<div class="bt-pager bt-prev">〈</div>
-		<div class="bt-pager bt-next">〉</div>
-	</div>
-</div>
-*/
+//	Main Navi 생성
+$.get('../json/navi.json', onNaviLoad);
+
+//	.navi-mo-icon 클릭 
+$(".navi-mo-icon").on("click",onNaviMoClick);
+
+//	.mo-wrapper 클릭 
+$(".mo-wrapper").on("click",onMoWrapperClick);
+
+//	.mo-wrap 클릭 
+$(".mo-wrap").on("click",onMoWrapClick);
+
+//	.mo-navi .slash 클릭 
+$(".mo-navi .bt-down").on("click",onMoNaviClick);
+
+// 스크롤 이벤트
+$(window).on("scroll",onScroll);
+$(".mo-wrapper").on("scroll touchmove mousewheel",onMobileScroll);
+
+// 리사이즈 이벤트
+$(window).on("resize",onResize);
+
