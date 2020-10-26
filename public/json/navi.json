@@ -129,17 +129,17 @@
 				}
 			]
 		},
-		{"title": "BLOG", "link": "#", "class":"COL1 COL", "icon": "", "subs": [
-			{"title":"","link":"", "icon": "","subs":[	
-				{"title":"BLOG DEFAULT","link":"#", "icon": ""},
-				{"title":"ALTERNATIVE STYLE","link":"#", "icon": ""},
-				{"title":"BLOG FULL WIDTH","link":"#", "icon": ""},
-				{"title":"SMALL IMAGES","link":"#", "icon": ""},
-				{"title":"MASONRY GRID","link":"#", "icon": ""},
-				{"title":"BLOG MASK","link":"#", "icon": "HOT", "color":"yellow"},
-				{"title":"4 COLUMNS","link":"#", "icon": ""},
-				{"title":"BLOG SINGLE POST","link":"#", "icon": ""},
-				{"title":"BLOG RTL","link":"#", "icon": "NEW", "color":"green"}
+		{"title": "BLOG", "link": "#", "class":"COL COL1", "icon": "", "subs": [
+			{"title": "", "link": "", "icon": "", "subs": [
+				{"title": "BLOG DEFAULT", "link": "#", "icon":""},
+				{"title": "ALTERNATIVE STYLE", "link": "#", "icon":""},
+				{"title": "BLOG FULL WIDTH", "link": "#", "icon":""},
+				{"title": "SMALL IMAGES", "link": "#", "icon":""},
+				{"title": "MASONRY GRID", "link": "#", "icon":""},
+				{"title": "BLOG MASK", "link": "#", "icon":"HOT", "color": "yellow"},
+				{"title": "4 COLUMNS", "link": "#", "icon":""},
+				{"title": "BLOG SINGLE POST", "link": "#", "icon":""},
+				{"title": "BLOG RTL", "link": "#", "icon":"NEW", "color": "green"}
 			]}
 		]},
 		{"title": "PAGES", "link": "#", "class":"COL COL4", "icon": "", "subs": [
@@ -208,6 +208,7 @@
 		]}
 	]
 }
+
 
 
 
