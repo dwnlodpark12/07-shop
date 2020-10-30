@@ -1,7 +1,7 @@
 /** 전역변수선언 ************************************/
 var subNow = 0;		// .navi.FULL 에서의 슬라이드변수
 var subLast = 3;	// .navi.FULL 에서의 슬라이드변수
-var catePrds =[];	// .cate-wrapper 에서의 전역변수
+var catePrds = [];	// .cate-wrapper의 전역변수
 
 
 /** 사용자 지정 함수 ********************************/
@@ -406,6 +406,14 @@ function getCount() {
 	return count;
 }
 
+function getCount2() {
+	var wid = $(window).outerWidth();
+	var count = 3;
+	if(wid <= 991 && wid > 575) count = 2;
+	else if(wid <= 575) count = 1;
+	return count;
+}
+
 function onProductLoad(r) {
 	var html = '';
 	for(var i in r.prds) {
@@ -450,30 +458,30 @@ function onProductLoad(r) {
 		this.params.slidesPerGroup = getCount();
 		this.params.slidesPerView = getCount();
 	});
+
 }
 
 function onPrdCateLoad(r) {
 	var html = '';
 	for(var i in r.cates) {
-			html = '<div class="cate '+r.cates[i].class+'">';
-			html += '<div class="cont">';
-			html += '<div class="designer">DESIGNERS: <span>'+r.cates[i].designer+'</span></div>';
-			html += '<h2 class="title">'+r.cates[i].title+'</h2>';
-			html += '<div class="price"><span>$</span>'+r.cates[i].price+'</div>';
-			html += '<div class="content">'+r.cates[i].content+'</div>';
-			html += '<button class="bt-read">READ MORE</button>';
-			html += '</div>';
-			for(var j in r.cates[i].src) {
+		html  = '<div class="cate '+r.cates[i].class+'">';
+		html += '	<div class="cont">';
+		html += '		<div class="designer">DESIGNERS: <span>'+r.cates[i].designer+'</span></div>';
+		html += '		<h2 class="title">'+r.cates[i].title+'</h2>';
+		html += '		<div class="price">$<span>'+r.cates[i].price+'</span></div>';
+		html += '		<div class="content">'+r.cates[i].content+'</div>';
+		html += '		<button class="bt-read">READ MORE</button>';
+		html += '	</div>';
+		for(var j in r.cates[i].src) {
 			html += '<div class="image">';
-			html += '<img src="'+r.cates[i].src[j]+'" alt="상품" class="W-100">';
+			html += '	<img src="'+r.cates[i].src[j]+'" alt="상품" class="w-100">';
 			html += '</div>';
-			}
-			html += '</div>';
-			catePrds.push($(html));
-			/* $(".cate-wrapper .cate-wrap").append(html); */
 		}
-		$(".cate-wrapper .navi").click(onCateNaviClick);
-		$(".cate-wrapper .navi").eq(0).trigger("click");
+		html += '</div>';
+		catePrds.push($(html));
+	}
+	$(".cate-wrapper .navi").click(onCateNaviClick);
+	$(".cate-wrapper .navi").eq(0).trigger("click");
 }
 
 function onCateNaviClick(e) {
@@ -484,26 +492,72 @@ function onCateNaviClick(e) {
 }
 
 function cateAni(id) {
-	$(".cate-wrapper .cate").css({"opacity":0,"transform":"translateY(100px)"});
+	$(".cate-wrapper .cate").css({"opacity": 0, "transform": "translateY(100px)"});
 	var slide = $(catePrds[id].clone()).appendTo(".cate-wrapper .cate-wrap").css({
-		"opacity":0,
-		"transform":"translateY(100px)",
-		"position":"absolute"
+		"opacity": 0, "transform": "translateY(100px)", "position": "absolute"
 	});
 	slide.css("opacity");
 	slide.css("transform");
-	slide.css({
-		"opacity":1,
-		"transform":"translateY(0)"
-});
+	slide.css({"opacity": 1, "transform": "translateY(0)"});
 	setTimeout(function(){
 		$(".cate-wrapper .cate").remove();
 		$(catePrds[id].clone()).appendTo(".cate-wrapper .cate-wrap");
-	},500);
+	}, 500);
 }
 
-/** 이벤트 등록 **********************/
+function onBranchLoad(r) {
+	var html = '';
+	for(var i in r.branchs) {
+		html  = '<li class="branch">';
+		html += '	<img src="'+r.branchs[i].src+'" alt="'+r.branchs[i].title+'" class="w-100">';
+		html += '	<button class="bt-link">'+r.branchs[i].title+'</button>';
+		html += '</li>';
+		$(".branch-wrapper .branch-wrap").append(html);
+	}
+}
 
+function onBlogLoad(r) {
+	var html = '';
+	for (var i in r.blogs) {
+		html = '<div class="blog slide swiper-slide">';
+		html += '<div class="img-wrap">';
+		html += '<img src="'+r.blogs[i].src+'" alt="blog" class="w-100">';
+		html += '<div class="date-wrap">';
+		html += '<div class="date">'+r.blogs[i].date+'</div>';
+		html += '<div class="month">'+r.blogs[i].month+'</div>';
+		html += '</div>';
+		html += '<div class="tag">'+r.blogs[i].tag+'</div>';
+		html += '</div>';
+		html += '<h3 class="title">'+r.blogs[i].title+'</h3>';
+		html += '<button class="bt-comment">Venenatis veulum peus</button>';
+		html += '<p class="content">'+r.blogs[i].content+'</p>';
+		html += '<button class="bt-read">Rede More</button>';
+		html += '</div>';
+		$(".blog-wrapper .blog-wrap").append(html);
+	}
+	var swiper2 = new Swiper('.sub-slide.type3 .swiper-container', {
+		slidesPerView: getCount2(),
+		slidesPerGroup: getCount2(),
+		spaceBetween: 0,
+		loop: true,
+		loopFillGroupWithBlank: false,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.bt-next',
+			prevEl: '.bt-prev',
+		}
+	});
+	swiper2.on("resize", function() {
+		this.params.slidesPerGroup = getCount2();
+		this.params.slidesPerView = getCount2();
+	});
+}
+
+
+/** 이벤트 등록 **********************/
 
 // Main Navi 생성
 $.get('../json/navi.json', onNaviLoad);
@@ -520,6 +574,12 @@ $.get('../json/product.json', onProductLoad);
 // cate-wrapper 생성
 $.get('../json/prd-cate.json', onPrdCateLoad);
 
+// branch-wrapper 생성
+$.get('../json/branch.json', onBranchLoad);
+
+// blog-wrapper 생성
+$.get('../json/blog.json', onBlogLoad);
+
 // 스크롤 이벤트
 $(window).on("scroll", onScroll);
 $(".mo-wrapper").on("scroll touchmove mousewheel", onMobileScroll);
@@ -527,6 +587,14 @@ $(".mo-wrap").on("scroll touchmove mousewheel", onMobileWrapScroll);
 
 // 리사이즈 이벤트
 $(window).on("resize", onResize);
+
+// 이메일 발송
+emailjs.init("user_dgaKdupKeZDmBkYTuccMf");
+function mailSend(f) {
+	f.contact_number.value = Math.random() * 100000 | 0;
+	emailjs.sendForm('service_z6asada', 'template_0w4orii', f);
+	return false;
+}
 
 
 
