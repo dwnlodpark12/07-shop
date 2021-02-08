@@ -1,10 +1,10 @@
 {
 	"prds":[
-		{"id":1, "title":"Yovbeglass Side Chair", "brand":"DEMO-BASEL2", "price":"579.00", "src":["../img/chair-01-f.jpg","../img/chair-01-b.jpg"]},
-		{"id":2, "title":"Yood Side Chair", "brand":"DEMO-BASEL2", "price":"449.00", "src":["../img/chair-02-f.jpg","../img/chair-02-b.jpg"]},
-		{"id":3, "title":"Yovded Plastic Armchair", "brand":"DEMO-BASEL2", "price":"689.00", "src":["../img/chair-03-f.jpg","../img/chair-03-b.jpg"]},
-		{"id":4, "title":"Yovlastic Side Chair", "brand":"DEMO-BASEL2", "price":"389.00", "src":["../img/chair-04-f.jpg","../img/chair-04-b.jpg"]},
-		{"id":5, "title":"Yrmchair Rocker Base", "brand":"DEMO-BASEL2", "price":"999.00", "src":["../img/chair-05-f.jpg","../img/chair-05-b.jpg"]},
-		{"id":6, "title":"Yovded Fiberglass Armchair", "brand":"DEMO-BASEL2", "price":"799.00", "src":["../img/chair-06-f.jpg","../img/chair-06-b.jpg"]}
+		{"id":1, "title":"Gueridon Coffee Table", "brand":"Vitra.", "price":"2,990.00$", "src":["../img/table1_1.jpg","../img/table1_2.jpg"]},
+		{"id":2, "title":"White Calacatta Soap Table", "brand":"TACCHINI", "price":"4,890.00$", "src":["../img/table2_1.jpg","../img/table2_2.jpg"]},
+		{"id":3, "title":"Sahara Noir Marble Soap Table", "brand":"TACCHINI", "price":"4,890.00$", "src":["../img/table3_1.jpg","../img/table3_2.jpg"]},
+		{"id":4, "title":"DLM Side Table", "brand":"HAY", "price":"259.00$", "src":["../img/table4_1.jpg","../img/table4_2.jpg"]},
+		{"id":5, "title":"Tabouret Solvay Table", "brand":"Vitra.", "price":"999.00$", "src":["../img/table5_1.jpg","../img/table5_2.jpg"]},
+		{"id":6, "title":"Plinth Tall Side Table", "brand":"MENU", "price":"1,590.00$", "src":["../img/table6_1.jpg","../img/table6_2.jpg"]}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"cates":[
-		{"id":1, "title":"EAMES SOFA COMPACT", "designer":"VALENTINO RACHELLI", "price":"800", "content":"Vel himenaeos quam fringilla a interdum blandit adipiscing ullamcorper per consequat in ut a enim suspendisse luctus commodo varius dictumst egestas at curae ultricies nam.", "src":["../img/cate01-a.jpg","../img/cate01-b.jpg"], "class":"LT" },
-		{"id":2, "title":"EAMES SOFA COMPACT", "designer":"CHARLES AND RAY EAMES", "price":"800", "content":"Vel himenaeos quam fringilla a interdum blandit adipiscing ullamcorper per consequat in ut a enim suspendisse luctus commodo varius dictumst egestas at curae ultricies nam.", "src":["../img/cate02-a.jpg","../img/cate02-b.jpg"], "class":"CT" },
-		{"id":3, "title":"EAMES SOFA COMPACT", "designer":"VALENTINO RACHELLI", "price":"800", "content":"Vel himenaeos quam fringilla a interdum blandit adipiscing ullamcorper per consequat in ut a enim suspendisse luctus commodo varius dictumst egestas at curae ultricies nam.", "src":["../img/cate03-a.jpg","../img/cate03-b.jpg"], "class":"RT" }
+		{"id":1, "title":"PARIS Sofa", "designer":"Mete", "price":"2,890", "content":"Vel himenaeos quam fringilla a interdum blandit adipiscing ullamcorper per consequat in ut a enim suspendisse luctus commodo varius dictumst egestas at curae ultricies nam.", "src":["../img/prd01_1.jpg","../img/prd01_2.jpg"], "class":"LT" },
+		{"id":2, "title":"Tip Ton Chair", "designer":"Vitra.", "price":"400", "content":"Vel himenaeos quam fringilla a interdum blandit adipiscing ullamcorper per consequat in ut a enim suspendisse luctus commodo varius dictumst egestas at curae ultricies nam.", "src":["../img/prd02_1.jpg","../img/prd02_2.jpg"], "class":"CT" },
+		{"id":3, "title":"Softshell Chair", "designer":"Vitra.", "price":"1,160", "content":"Vel himenaeos quam fringilla a interdum blandit adipiscing ullamcorper per consequat in ut a enim suspendisse luctus commodo varius dictumst egestas at curae ultricies nam.", "src":["../img/prd03_1.jpg","../img/prd03_2.jpg"], "class":"RT" }
 	]
 }

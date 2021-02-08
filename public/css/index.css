@@ -54,7 +54,7 @@ html, body {font-size: 16px; font-family: 'Rubik', sans-serif;}
 .sub-slide .bt-quick:hover {background-color: #555;}
 .sub-slide .slide:hover .bt-quick {transform: translateY(0);}
 
-.sub-slide .bt-icon {height: 32px; display: flex; align-items: center; font-size: 1.25em; color: #666; opacity: 0;}
+.sub-slide .bt-icon {height: 32px; display: flex; align-items: center; font-size: 1.25em; color: #161616; opacity: 0;}
 .sub-slide .slide:hover .bt-icon {opacity: 1;}
 .sub-slide .bt-icon:hover > .popper {transform: translateX(0); opacity: 1; padding: 0.5em 0 0.5em 0.75em; width: auto; overflow: visible;}
 .sub-slide .bt-heart {right: 8px; top: 8px;}
@@ -71,9 +71,9 @@ html, body {font-size: 16px; font-family: 'Rubik', sans-serif;}
 .sub-slide .color span.yellow {color: #f1f12c;}
 .sub-slide .color span.active {border-bottom: 3px solid #111;}
 
-.sub-slide .slide > .title {color: #777; user-select: none;}
-.sub-slide .slide > .brand {color: #777; user-select: none;}
-.sub-slide .slide > .price {color: #222; user-select: none;}
+.sub-slide .slide > .title {color: #222; user-select: none;}
+.sub-slide .slide > .brand {color: #222; user-select: none;}
+.sub-slide .slide > .price {color: #333; user-select: none;}
 .sub-slide .slide > .price > .price-def {color: #999; text-decoration: line-through;}
 .sub-slide .slide > .price > .price-sale {color: #ceb28b;}
 .sub-slide .slide > .title:hover {color: #333;}
@@ -120,10 +120,13 @@ html, body {font-size: 16px; font-family: 'Rubik', sans-serif;}
 .title-wrapper .navi-wrap > .navi > .title {font-size: 0.875em; font-weight: 400; color: #333; position: relative;}
 .title-wrapper .navi-wrap .fa-angle-down {font-size: 0.75em; color: #aaa;}
 
-.title-wrapper .IMAGE .sub-wrap {display: flex; flex-wrap: wrap; width: 800px;}
+.title-wrapper .IMAGE .sub-wrap {display: flex; flex-wrap: wrap; width: 60vw;}
 .title-wrapper .IMAGE .sub {flex: 18% 0 0; margin: 1%;}
 .title-wrapper .IMAGE .sub .title {text-align: center; font-weight: bold; color: #666; font-size: 0.875em;}
 .title-wrapper .IMAGE .sub .title > span {color: #dfc9a4;}
+.title-wrapper .IMAGE1 .sub-wrap { width: 40vw;}
+.title-wrapper .IMAGE1 .sub-wrap .sub {flex: 23% 0 0; margin: 1em 1%;}
+.title-wrapper .IMAGE1 .title {margin-bottom: 1em;}
 
 .title-wrapper .navi.FULL {position: static !important;}
 .title-wrapper .FULL .sub-wrap {width: 100%; top: 85px !important;}
@@ -223,8 +226,8 @@ html, body {font-size: 16px; font-family: 'Rubik', sans-serif;}
 .banner-wrapper .slide-stage {position: relative; height: 100%; /* overflow: hidden; */ z-index: 10;}
 .banner-wrapper .slide-wrap {width: 300%; height: 100%; display: flex; position: relative;}
 .banner-wrapper .slide {flex: 33.3333% 0 0; height: 100%; background-position: center top; background-size: cover; background-repeat: no-repeat; display: flex; flex-direction: column; justify-content: center; align-items: center; user-select: none; cursor: grab;}
-.banner-wrapper .slide .slogan {font-family: 'Lora', serif; font-style: italic; color: #dfc9a4; font-size: 1.5em;}
-.banner-wrapper .slide .title {font-size: 3em; color: #333; padding: 0.5em;}
+.banner-wrapper .slide .slogan {font-family: 'Lora', serif; font-style: italic; color: #ceb28b; font-size: 1.5em;}
+.banner-wrapper .slide .title {font-size: 3em; color: #ccc; padding: 0.5em;}
 .banner-wrapper .slide .price {font-size: 8em; color: #ddd; padding: 0.125em;}
 .banner-wrapper .slide .bt-banner {border: 1px solid #222; font-size: 0.875em; padding: 0.75em 1.5em; color: #444; transition: all 0.5s; background-color: #f8f8f8; outline: none;}
 .banner-wrapper .slide .bt-banner:hover {background-color: #222; color: #f8f8f8;}
@@ -290,9 +293,9 @@ html, body {font-size: 16px; font-family: 'Rubik', sans-serif;}
 .cate-wrapper .bt-read:hover {background-color: #dfc9a4;}
 
 /**************** .branch-wrapper ******************/
-.branch-wrapper {background: url(../img/branch-bg.jpg) no-repeat center -10vh; background-size: cover; padding-top: 2em;}
-.branch-wrapper .title-bars .title {color: #444;}
-.branch-wrapper .title-bars .title-sm {color: #caaa8f;}
+.branch-wrapper {background: url(../img/branch_bg.jpg) no-repeat center -10vh; background-size: cover; padding-top: 2em;}
+.branch-wrapper .title-bars .title {color: #0a0a0a;}
+.branch-wrapper .title-bars .title-sm {color: #dfc9a4;}
 .branch-wrapper .branch-wrap {display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; margin-top: 2em; padding: 1.5em; background-color: #fff;}
 .branch-wrapper .branch {flex: 24% 0 0; position: relative; overflow: hidden; cursor: pointer;}
 .branch-wrapper .branch img {transition: all 1.5s;}
