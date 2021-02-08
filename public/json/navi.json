@@ -1,62 +1,57 @@
 {
 	"navs": [
 		{"title": "HOME", "link": "#", "class":"IMAGE", "icon": "", "subs": [
-			{"title": "<span>1.</span> Bakery", "src": "../img/bakery.jpg", "link": "#"},
-			{"title": "<span>2.</span> Bicycle", "src": "../img/bicycle.jpg", "link": "#"},
-			{"title": "<span>3.</span> Car", "src": "../img/coffee.jpg", "link": "#"},
-			{"title": "<span>4.</span> coffee", "src": "../img/bakery.jpg", "link": "#"},
-			{"title": "<span>5.</span> Cosmetics", "src": "../img/cosmetics.jpg", "link": "#"},
-			{"title": "<span>6.</span> Electronics", "src": "../img/electronics.jpg", "link": "#"},
-			{"title": "<span>7.</span> Fashion", "src": "../img/fashion_2.jpg", "link": "#"},
-			{"title": "<span>8.</span> Furniture", "src": "../img/furniture.jpg", "link": "#"},
-			{"title": "<span>9.</span> Game", "src": "../img/game.jpg", "link": "#"},
-			{"title": "<span>10.</span> Lighting", "src": "../img/lighting.jpg", "link": "#"}
+			{"title": "<span>1.</span> Bed", "src": "../img/bed.jpg", "link": "#"},
+			{"title": "<span>2.</span> Sofas", "src": "../img/sofas.jpg", "link": "#"},
+			{"title": "<span>3.</span> Sofa Bed", "src": "../img/sofabed.jpg", "link": "#"},
+			{"title": "<span>4.</span> Daybed", "src": "../img/daybed.jpg", "link": "#"},
+			{"title": "<span>5.</span> Lounge chairs", "src": "../img/loungechair.jpg", "link": "#"},
+			{"title": "<span>6.</span> Lounge Table", "src": "../img/loungetable.jpg", "link": "#"},
+			{"title": "<span>7.</span> Dining chairs", "src": "../img/diningchair.jpg", "link": "#"},
+			{"title": "<span>8.</span> Bar stool", "src": "../img/barstool.jpg", "link": "#"},
+			{"title": "<span>9.</span> Stools/Benches", "src": "../img/bench.jpg", "link": "#"},
+			{"title": "<span>10.</span> Table", "src": "../img/table.jpg", "link": "#"}
 		]},
 		{"title": "SHOP", "link": "#", "class":"FULL COL COL4", "icon": "SALE", "color": "red", "subs": [
-				{"title": "SHOP STYLES", "link": "#", "subs": [
-					{"title": "Quick shop product", "link": "#", "icon": "HOT", "color": "yellow"},
-					{"title": "Masonry Grid", "link": "#", "icon": ""},
-					{"title": "Default style", "link": "#", "icon": ""},
-					{"title": "Alternative Shop", "link": "#", "icon": "HOT", "color": "yellow"},
-					{"title": "Button on hover", "link": "#", "icon": ""},
-					{"title": "Button hover alt", "link": "#", "icon": ""},
-					{"title": "Hover info", "link": "#", "icon": ""},
-					{"title": "Standard button", "link": "#", "icon": ""},
-					{"title": "Full width", "link": "#", "icon": ""}
+				{"title": "LIGHTING", "link": "#", "subs": [
+					{"title": "Pendant lamps", "link": "#", "icon": "HOT", "color": "yellow"},
+					{"title": "Floor lamps", "link": "#", "icon": ""},
+					{"title": "Table lamps", "link": "#", "icon": ""},
+					{"title": "Wall lamps", "link": "#", "icon": "HOT", "color": "yellow"},
+					{"title": "Portable lamps", "link": "#", "icon": ""}
 				]},
-				{"title": "PRODUCT PAGES", "link": "#", "subs": [
-					{"title": "Default style", "link": "#", "icon": ""},
-					{"title": "Alternative style", "link": "#", "icon": ""},
-					{"title": "Compact", "link": "#", "icon": "NEW", "color": "green"},
-					{"title": "Sticky details", "link": "#", "icon": "HOT", "color": "yellow"},
-					{"title": "Variationst images", "link": "#", "icon": ""},
-					{"title": "Variations style 2", "link": "#", "icon": ""},
-					{"title": "Variant images grouped", "link": "#", "icon": ""},
-					{"title": "Powerful Layout", "link": "#", "icon": ""},
-					{"title": "With sidebar", "link": "#", "icon": ""}
+				{"title": "ACC", "link": "#", "subs": [
+					{"title": "Home Accessories", "link": "#", "icon": ""},
+					{"title": "Decoration", "link": "#", "icon": ""},
+					{"title": "Office Accesories", "link": "#", "icon": "NEW", "color": "green"},
+					{"title": "Tableware", "link": "#", "icon": "HOT", "color": "yellow"},
+					{"title": "kitchen", "link": "#", "icon": ""},
+					{"title": "Textiles", "link": "#", "icon": ""},
+					{"title": "Bathroom", "link": "#", "icon": ""},
+					{"title": "Fashion", "link": "#", "icon": ""}
 				]},
-				{"title": "PRODUCT FEATURES", "link": "#", "subs": [
-					{"title": "360° product viewer", "link": "#", "icon": ""},
-					{"title": "Zoom image", "link": "#", "icon": ""},
-					{"title": "With video", "link": "#", "icon": "NEW", "color": "green"},
-					{"title": "Large Image", "link": "#", "icon": ""},
-					{"title": "Small Image", "link": "#", "icon": ""},
-					{"title": "Variable Product", "link": "#", "icon": ""},
-					{"title": "Grouped Product", "link": "#", "icon": ""},
-					{"title": "External Product", "link": "#", "icon": ""},
-					{"title": "Sidebar right", "link": "#", "icon": ""},
-					{"title": "Product Instagram Tags", "link": "#", "icon": ""}
+				{"title": "BRANDS", "link": "#", "subs": [
+					{"title": "Artek", "link": "#", "icon": ""},
+					{"title": "&tradition", "link": "#", "icon": ""},
+					{"title": "Innovation Living", "link": "#", "icon": "NEW", "color": "green"},
+					{"title": "Louis Poulsen", "link": "#", "icon": ""},
+					{"title": "AGO Lighting", "link": "#", "icon": ""},
+					{"title": "Fogia", "link": "#", "icon": ""},
+					{"title": "Fredercia", "link": "#", "icon": ""},
+					{"title": "Auping", "link": "#", "icon": ""},
+					{"title": "VIPP", "link": "#", "icon": ""},
+					{"title": "Wilde+spleth", "link": "#", "icon": ""}
 				]},
-				{"title": "SHOP PAGES", "link": "#", "subs": [
-					{"title": "2 Columns", "link": "#", "icon": ""},
-					{"title": "3 Columns", "link": "#", "icon": ""},
-					{"title": "4 Columns", "link": "#", "icon": ""},
-					{"title": "6 Columns", "link": "#", "icon": ""},
-					{"title": "Sidebar Left", "link": "#", "icon": ""},
-					{"title": "Sidebar Right", "link": "#", "icon": ""},
-					{"title": "No sidebar", "link": "#", "icon": ""},
-					{"title": "Category banner", "link": "#", "icon": ""},
-					{"title": "RTL Shop page", "link": "#", "icon": "NEW", "color": "green"}
+				{"title": "DESIGNERS", "link": "#", "subs": [
+					{"title": "All the way yo Paris", "link": "#", "icon": ""},
+					{"title": "Afterroom", "link": "#", "icon": ""},
+					{"title": "Cellie Manz", "link": "#", "icon": ""},
+					{"title": "Christina HalstrØm", "link": "#", "icon": ""},
+					{"title": "Egon Eiermann", "link": "#", "icon": ""},
+					{"title": "Form Us With Love", "link": "#", "icon": ""},
+					{"title": "Gamfratesi", "link": "#", "icon": ""},
+					{"title": "Space Copenhagen", "link": "#", "icon": ""},
+					{"title": "Jaime Hayon", "link": "#", "icon": "NEW", "color": "green"}
 				]}
 			], "infos": [
 				{"title": "FREE SHIPPING", "link": "#", "content": "Free for $50+ orders", "icon": "fa fa-rocket"},
@@ -67,82 +62,80 @@
 				{
 					"cases": [
 						{
-							"img": ["../img/ss-01-blue-01.jpg", "../img/ss-01-blue-02.jpg"],
+							"img": ["../img/chair01_1.jpg", "../img/chair01_2.jpg"],
 							"color": "blue"
 						},
 						{
-							"img": ["../img/ss-01-black-01.jpg", "../img/ss-01-black-02.jpg"],
-							"color": "black"
+							"img": ["../img/chair02_1.jpg", "../img/chair02_2.jpg"],
+							"color": "mint"
 						},
 						{
-							"img": ["../img/ss-01-yellow-01.jpg", "../img/ss-01-yellow-02.jpg"],
+							"img": ["../img/chair03_1.jpg", "../img/chair03_2.jpg"],
 							"color": "yellow"
 						}
 					],
-					"title": "Yus condntum sapien",
-					"brand": "BASEL",
-					"price": "$592.00",
+					"title": "Revolt Chair",
+					"brand": "HAY",
+					"price": "$499.00",
 					"priceDef": "",
 					"priceSale": ""
 				},
 				{
 					"cases": [
 						{
-							"img": ["../img/ss-02-blue-01.jpg"],
+							"img": ["../img/barstool01_1.jpg","../img/barstool01_2.jpg"],
 							"color": "blue"
 						},
 						{
-							"img": ["../img/ss-02-red-01.jpg", "../img/ss-02-red-02.jpg"],
+							"img": ["../img/barstool02_1.jpg", "../img/barstool02_2.jpg"],
 							"color": "red"
 						},
 						{
-							"img": ["../img/ss-02-yellow-01.jpg"],
+							"img": ["../img/barstool03_1.jpg"],
 							"color": "yellow"
 						}
 					],
-					"title": "Yom orki lacinia",
-					"brand": "BASEL",
+					"title": "Soft Edge10 Bar Stool",
+					"brand": "HAY",
 					"price": "",
-					"priceDef": "$799.00",
-					"priceSale": "$592.00"
+					"priceDef": "$599.00",
+					"priceSale": "$539.00"
 				},
 				{
 					"cases": [
 						{
-							"img": ["../img/ss-01-yellow-01.jpg", "../img/ss-01-yellow-02.jpg"],
+							"img": ["../img/lochair01.jpg"],
 							"color": "yellow"
 						},
 						{
-							"img": ["../img/ss-01-black-01.jpg", "../img/ss-01-black-02.jpg"],
+							"img": ["../img/lochair02.jpg"],
 							"color": "black"
 						},
 						{
-							"img": ["../img/ss-01-blue-01.jpg", "../img/ss-01-blue-02.jpg"],
+							"img": ["../img/lochair03.jpg"],
 							"color": "blue"
 						}
 					],
-					"title": "Yus condntum sapien2",
-					"brand": "BASEL",
+					"title": "Beetle Lounge chair",
+					"brand": "GUBI",
 					"price": "",
-					"priceDef": "$1,299.00",
-					"priceSale": "$892.00"
+					"priceDef": "$2,299.00",
+					"priceSale": "$1,599.00"
 				}
 			]
 		},
-		{"title": "BLOG", "link": "#", "class":"COL COL1", "icon": "", "subs": [
+		{"title": "BOARD", "link": "#", "class":"COL COL1", "icon": "", "subs": [
 			{"title": "", "link": "", "icon": "", "subs": [
-				{"title": "BLOG DEFAULT", "link": "#", "icon":""},
-				{"title": "ALTERNATIVE STYLE", "link": "#", "icon":""},
-				{"title": "BLOG FULL WIDTH", "link": "#", "icon":""},
-				{"title": "SMALL IMAGES", "link": "#", "icon":""},
-				{"title": "MASONRY GRID", "link": "#", "icon":""},
-				{"title": "BLOG MASK", "link": "#", "icon":"HOT", "color": "yellow"},
-				{"title": "4 COLUMNS", "link": "#", "icon":""},
-				{"title": "BLOG SINGLE POST", "link": "#", "icon":""},
-				{"title": "BLOG RTL", "link": "#", "icon":"NEW", "color": "green"}
+				{"title": "Notice", "link": "#", "icon":""},
+				{"title": "Q&A", "link": "#", "icon":""},
+				{"title": "Review", "link": "#", "icon":""},
+				{"title": "Magazine", "link": "#", "icon":""},
+				{"title": "Project", "link": "#", "icon":""},
+				{"title": "Catalog", "link": "#", "icon":"HOT", "color": "yellow"},
+				{"title": "Personal Order", "link": "#", "icon":""}
 			]}
 		]},
-		{"title": "PAGES", "link": "#", "class":"COL COL4", "icon": "", "subs": [
+		{"title": "BOARD", "link": "#", "class":"COL COL4", "icon": "", "subs": [
 			{"title": "PAGE", "link": "#", "subs": [
 				{"title": "FaQs", "link": "#", "icon": "", "color": ""},
 				{"title": "About Me", "link": "#", "icon": "", "color": ""},
@@ -178,43 +171,4 @@
 				{"title": "Password", "link": "#", "icon": "", "color": ""},
 				{"title": "Password 2", "link": "#", "icon": "", "color": ""}
 			]}
-		]},
-		{"title": "FEATURES", "link": "#", "class":"COL COL3 BG", "bg": "", "icon": "", "subs": [
-			{"title": "PRODUCT PAGE", "link": "", "icon": "", "subs": [
-					{"title": "Product Attributes", "link": "#", "icon":"NEW", "color": "green"},
-					{"title": "Add to cart button 3d", "link": "#", "icon":"HOT", "color": "yellow"},
-					{"title": "Product Trust seal", "link": "#", "icon":"NEW", "color": "green"},
-					{"title": "Product Real time Visitor", "link": "#", "icon":""},
-					{"title": "Product pre-orders", "link": "#", "icon":""},
-					{"title": "Label for products", "link": "#", "icon":""},
-					{"title": "Product countdown", "link": "#", "icon":"HOT", "color": "yellow"},
-					{"title": "Product dropdown simple", "link": "#", "icon":""},
-					{"title": "Variant images grouped", "link": "#", "icon":""}
-			]},
-			{"title": "BASEL ELEMENTS", "link": "", "icon": "", "subs": [
-					{"title": "AJAX products tabs", "link": "#", "icon":"HOT", "color": "yellow"},
-					{"title": "Product AJAX arrows", "link": "#", "icon":""},
-					{"title": "Categories menu", "link": "#", "icon":"HOT", "color": "yellow"},
-					{"title": "360 degree view", "link": "#", "icon":""},
-					{"title": "Menu price", "link": "#", "icon":""}
-			]},
-			{"title": "ELEMENTS", "link": "", "icon": "", "subs": [
-					{"title": "Quick shop", "link": "#", "icon":"HOT", "color": "yellow"},
-					{"title": "Grid/List switcher", "link": "#", "icon":"HOT", "color": "yellow"},
-					{"title": "Load more", "link": "#", "icon":""},
-					{"title": "Infinit scrolling", "link": "#", "icon":"NEW", "color": "green"},
-					{"title": "RTL Ready", "link": "#", "icon":""}
-			]}
 		]}
-	]
-}
-
-
-
-
-
-
-
-
-
-
